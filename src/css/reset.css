@@ -13,3 +13,14 @@ a {
 li {
     list-style-type: none;
 }
+
+@media (hover: none) {
+    .header ul li a:hover {
+        color: initial;
+    }
+
+    .header ul li:last-child a:last-child:hover {
+        background-color: initial;
+        color: initial;
+    }
+}

@@ -55,17 +55,10 @@
         flex-wrap: wrap;
     }
 
-    .header ul li a:hover {
-        color: none;
-    }
-    .header ul li:last-child a:hover {
-        background-color: none;
-        color: none;
-    }
-
     .header ul li a:active {
         color: var(--color-standard-purple);
     }
+
     .header ul li:last-child a:active {
         background-color: var(--color-standard-purple);
         color: white;
