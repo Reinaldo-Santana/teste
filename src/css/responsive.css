@@ -55,15 +55,6 @@
         flex-wrap: wrap;
     }
 
-    .header ul li a:active {
-        color: var(--color-standard-purple);
-    }
-
-    .header ul li:last-child a:active {
-        background-color: var(--color-standard-purple);
-        color: white;
-    }
-
     .home {
         min-height: auto;
         padding-top: 4rem;
@@ -88,6 +79,17 @@
     }
 }
 
+@media (hover: none) {
+    .header ul li a:hover {
+        color: initial;
+    }
+
+    .header ul li:last-child a:last-child:hover {
+        background-color: initial;
+        color: initial;
+    }
+}
+
 @media (width <= 576px) {
     .header {
         padding-inline: 1.5%;
@@ -104,6 +106,14 @@
 
     .header ul li a {
         font-size: 14px;
+    }
+
+    .header ul li a:hover {
+        color: initial;
+    }
+    .header ul li:last-child a:last-child:hover {
+        background-color: initial;
+        color: initial;
     }
 
     .home {
