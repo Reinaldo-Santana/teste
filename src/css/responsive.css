@@ -1,3 +1,11 @@
+@media (pointer: coarse) {
+    .header ul li a:hover,
+    .header ul li:last-child a:last-child:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+}
+
 @media (width <= 1275px) {
     .header, .home {
         padding-inline: 5%;
@@ -9,6 +17,15 @@
 
     .home .home-left {
         transform: translateY(-3%);
+    }
+
+    .header ul li a:active {
+        color: var(--color-standard-purple);
+    }
+
+    .header ul li:last-child a:last-child:active {
+        background-color: var(--color-standard-purple);
+        color: white;
     }
 }
 
@@ -38,14 +55,6 @@
     }
 }
 
-@media (pointer: coarse) {
-    .header ul li a:hover,
-    .header ul li:last-child a:last-child:hover {
-        background-color: inherit;
-        color: inherit;
-    }
-}
-
 @media (width <= 992px) {
     .header, .home {
         flex-direction: column;
@@ -61,15 +70,6 @@
         margin-right: 0;
         justify-content: center;
         flex-wrap: wrap;
-    }
-
-    .header ul li a:active {
-        color: var(--color-standard-purple);
-    }
-
-    .header ul li:last-child a:last-child:active {
-        background-color: var(--color-standard-purple);
-        color: white;
     }
 
     .home {
