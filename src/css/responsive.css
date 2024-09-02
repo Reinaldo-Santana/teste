@@ -10,6 +10,14 @@
     .home .home-left {
         transform: translateY(-3%);
     }
+
+    .header ul li a:hover {
+        color: var(--color-standard-purple);
+    }
+    .header ul li:last-child a:last-child:hover {
+        background-color: var(--color-standard-purple);
+        color: white;
+    }
 }
 
 @media (width >= 993px) and (width <= 1035px) {
@@ -38,15 +46,15 @@
     }
 }
 
-@media (width <= 992px) {
-    @media (pointer: coarse) {
-        .header ul li a:hover,
-        .header ul li:last-child a:last-child:hover {
-            background-color: inherit;
-            color: inherit;
-        }
+@media (pointer: coarse) {
+    .header ul li a:hover,
+    .header ul li:last-child a:last-child:hover {
+        background-color: inherit;
+        color: inherit;
     }
-    
+}
+
+@media (width <= 992px) {
     .header, .home {
         flex-direction: column;
         text-align: center;
