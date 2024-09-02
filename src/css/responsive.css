@@ -97,10 +97,6 @@
 }
 
 @media (width <= 576px) {
-    a, button {
-        outline: none;
-    }
-    
     .header {
         padding-inline: 1.5%;
         gap: 40px;
