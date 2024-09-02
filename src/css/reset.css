@@ -15,7 +15,8 @@ li {
 }
 
 @media (pointer: coarse) {
-    *:hover {
+    .header ul li a:hover,
+    .header ul li:last-child a:last-child:hover {
         background-color: inherit;
         color: inherit;
     }
