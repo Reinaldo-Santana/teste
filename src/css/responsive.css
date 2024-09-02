@@ -39,6 +39,14 @@
 }
 
 @media (width <= 992px) {
+    @media (pointer: coarse) {
+        .header ul li a:hover,
+        .header ul li:last-child a:last-child:hover {
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+    
     .header, .home {
         flex-direction: column;
         text-align: center;
