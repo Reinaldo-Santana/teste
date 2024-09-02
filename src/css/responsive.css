@@ -83,6 +83,9 @@
     .header ul li a:hover {
         color: inherit;
     }
+    .header ul li:last-child a:last-child:hover {
+        background-color: inherit;
+    }
 }
 
 @media (width <= 576px) {
@@ -114,10 +117,6 @@
 
     .home .home-left form {
         width: 90%;
-    }
-
-    .home .home-left form button {
-        align-self: center;
     }
 }
 
