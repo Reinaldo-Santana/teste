@@ -10,14 +10,6 @@
     .home .home-left {
         transform: translateY(-3%);
     }
-
-    .header ul li a:hover {
-        color: var(--color-standard-purple);
-    }
-    .header ul li:last-child a:last-child:hover {
-        background-color: var(--color-standard-purple);
-        color: white;
-    }
 }
 
 @media (width >= 993px) and (width <= 1035px) {
