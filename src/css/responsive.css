@@ -79,14 +79,13 @@
     }
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
     .header ul li a:hover {
-        color: initial;
+        color: inherit;
     }
-
-    .header ul li:last-child a:last-child:hover {
-        background-color: initial;
-        color: initial;
+    .header ul li:last-child a:hover {
+        background-color: inherit;
+        color: inherit;
     }
 }
 
