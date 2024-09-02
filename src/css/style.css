@@ -1,0 +1,113 @@
+.header, .home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    padding-top: 25px;
+}
+
+.header h2 {
+    font-size: 32px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.header ul {
+    margin-right: 15px;
+    display: flex;
+    gap: 40px;
+}
+
+.header ul li a {
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.header ul li a:hover {
+    color: var(--color-standard-purple);
+}
+
+.header ul li:last-child a:last-child {
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px 0px;
+    border-color: var(--color-standard-purple);
+}
+.header ul li:last-child a:last-child:hover {
+    background-color: var(--color-standard-purple);
+    color: white;
+}
+
+.home {
+    min-height: 87vh;
+    margin-top: 5px;
+}
+
+.home .home-left, .home .home-left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home .home-left {
+    gap: 20px;
+    transform: translateY(-7%);
+}
+
+.home .home-left h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+
+.home .home-left h1::first-line {
+    color: var(--color-standard-purple);
+}
+
+.home .home-left p {
+    max-width: 500px;
+    margin-top: 20px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.home .home-left form {
+    width: 70%;
+    gap: 15px;
+}
+
+.home .home-left form input, form button {
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 12pt;
+}
+
+.home .home-left form input:nth-child(n+1):nth-child(-n+2) {
+    padding: 12px;
+    border: double 7px var(--color-standard-purple);
+}
+.home .home-left form input:nth-child(n+1):nth-child(-n+2):focus {
+    background-color: #E8F0FE;
+}
+
+.home .home-left form button {
+    width: 50%;
+    background-color: var(--color-standard-purple);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.home .home-left form button:active {
+    position: relative;
+    left: 2px;
+}
+
+.home .img-home {
+    width: 500px;
+    height: 500px;
+}
+
+.home .img-home img {
+    width: 100%;
+}
