@@ -108,14 +108,6 @@
         font-size: 14px;
     }
 
-    .header ul li a:hover {
-        color: initial;
-    }
-    .header ul li:last-child a:last-child:hover {
-        background-color: initial;
-        color: initial;
-    }
-
     .home {
         padding: 20px 5%;
     }
