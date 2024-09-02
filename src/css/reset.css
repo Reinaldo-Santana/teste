@@ -13,9 +13,3 @@ a {
 li {
     list-style-type: none;
 }
-
-@media (pointer: coarse) {
-    .header ul li a:hover {
-        color: inherit;
-    }
-}
