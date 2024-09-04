@@ -21,6 +21,7 @@
 
     .header ul li a:active {
         color: var(--color-standard-purple);
+        background-color: aquamarine;
     }
 
     .header ul li:last-child a:last-child:active {
