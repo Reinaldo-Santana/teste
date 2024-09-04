@@ -1,11 +1,3 @@
-@media (pointer: coarse) {
-    .header ul li a:hover,
-    .header ul li:last-child a:last-child:hover {
-        background-color: inherit;
-        color: inherit;
-    }
-}
-
 @media (width <= 1275px) {
     .header, .home {
         padding-inline: 5%;
@@ -19,9 +11,14 @@
         transform: translateY(-3%);
     }
 
+    .header ul li a:hover,
+    .header ul li:last-child a:last-child:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+
     .header ul li a:active {
         color: var(--color-standard-purple);
-        background-color: aquamarine;
     }
 
     .header ul li:last-child a:last-child:active {
