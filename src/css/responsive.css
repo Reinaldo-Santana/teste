@@ -3,18 +3,20 @@
         padding-inline: 5%;
     }
 
-    .home {
-        margin-top: 10px;
+    .header .logo:hover h2 {
+        text-shadow: none;
     }
 
-    .home .home-left {
-        transform: translateY(-3%);
+    .header .logo:active h2 {
+        text-shadow: 0 0 8px #ffffffc3;
+        transition: none;
     }
 
     .header ul li a:hover,
     .header ul li:last-child a:last-child:hover {
         background-color: inherit;
         color: inherit;
+        transition: none;
     }
 
     .header ul li a:active {
@@ -23,7 +25,24 @@
 
     .header ul li:last-child a:last-child:active {
         background-color: var(--color-standard-purple);
-        color: white;
+        color: #ffffff;
+    }
+
+    .home {
+        margin-top: 10px;
+    }
+
+    .home .home-left {
+        transform: translateY(-3%);
+    }
+
+
+    .home .home-left form button:hover {
+        color: #ffffff;
+    }
+
+    .home .home-left form button::before {
+        opacity: 0;
     }
 }
 
@@ -76,7 +95,7 @@
     }
 
     .home .home-left {
-        transform: translateY(0);
+        transform: none;
     }
 
     .home .home-left h1 {
@@ -146,7 +165,7 @@
     }
 
     .header ul li a:hover {
-        color: white;
+        color: #ffffff;
     }
 
     .header ul li:last-child a:last-child {
@@ -184,13 +203,13 @@
     .home .home-left form input:nth-child(n+1):nth-child(-n+2) {
         padding: 2px;
         background-color: #E8F0FE;
-        border: solid 1px white;
+        border: solid 1px #ffffff;
     }
 
     .home .home-left form button {
         width: 50%;
         background-color: transparent;
-        color: white;
+        color: #ffffff;
         border: solid 1px var(--color-standard-purple);
     }
 }
