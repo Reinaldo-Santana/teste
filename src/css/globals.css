@@ -7,6 +7,11 @@ body {
     color: white;
     font-family: 'Poppins';
 }
+@media (width >= 1600px) {
+    body {
+        max-width: 1400px;
+    }
+}
 
 :root {
     --color-standard-purple: rgba(132, 13, 201);

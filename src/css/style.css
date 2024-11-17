@@ -16,7 +16,7 @@
     transition: 0.2s ease-in-out;
 }
 .header .logo:hover h2 {
-    text-shadow: 0 0 8px #ffffffc3;;
+    text-shadow: 0 0 8px #ffffffc3;
     cursor: pointer;
 }
 
@@ -102,38 +102,15 @@
 
 .home .home-left form button {
     width: 50%;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
     background-color: var(--color-standard-purple);
     color: #ffffff;
     font-weight: 700;
     cursor: pointer;
     transition: 0.4s all;
 }
-.home .home-left form button:hover {
-    color: blueviolet;
-}
 .home .home-left form button:active {
     position: relative;
     left: 2px;
-}
-
-.home .home-left form button::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 0;
-    height: 2.5em;
-    top: 0;
-    left: 0;
-    border: solid 4px var(--color-standard-purple);
-    border-radius: 30em;
-    background: #ffffff;
-    transition: 0.5s ease;
-}
-.home .home-left form button:hover::before {
-    width: 11.2em;
 }
 
 .home .img-home {
