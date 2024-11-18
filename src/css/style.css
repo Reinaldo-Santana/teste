@@ -91,12 +91,13 @@
     font-size: 12pt;
 }
 
-.home .home-left form input:nth-child(n+1):nth-child(-n+2) {
+.home .home-left form input {
     padding: 12px;
     border: double 7px var(--color-standard-purple);
 }
 
-.home .home-left form input:nth-child(n+1):nth-child(-n+2):focus {
+.home .home-left form input:focus,
+.home .home-left form input:valid {
     background-color: #E8F0FE;
 }
 
