@@ -19,14 +19,14 @@
         transition: none;
     }
 
-    .header ul li a:active {
+    /* .header ul li a:active {
         color: var(--color-standard-purple);
     }
 
     .header ul li:last-child a:last-child:active {
         background-color: var(--color-standard-purple);
         color: #ffffff;
-    }
+    } */
 
     .home {
         margin-top: 10px;
