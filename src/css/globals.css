@@ -4,6 +4,7 @@ body {
     max-width: 1200px;
     margin-inline: auto;
     background-color: rgb(34, 34, 34);
+    background-color: black;
     color: white;
     font-family: 'Poppins';
 }
