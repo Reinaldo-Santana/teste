@@ -5,12 +5,10 @@
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(
-    .header ul li a:focus,
+.keyboard-navigation :is(.header ul li a:focus,
     .header .logo:focus,
-    .home .home-left form button:focus,
-    .home .home-left form input:focus
-) {
+    .home .text-container form button:focus,
+    .home .text-container form input:focus) {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
 }
@@ -64,50 +62,50 @@
     margin-top: 5px;
 }
 
-.home :is(.home-left, .home-left form) {
+.home :is(.text-container, .text-container form) {
     display: flex;
     flex-direction: column;
 }
 
-.home .home-left {
+.home .text-container {
     gap: 20px;
     transform: translateY(-7%);
 }
 
-.home .home-left h1 {
+.home .text-container h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
 }
 
-.home .home-left h1::first-line {
+.home .text-container h1::first-line {
     color: var(--color-standard-purple);
 }
 
-.home .home-left p {
+.home .text-container p {
     max-width: 500px;
     margin-top: 20px;
     line-height: 20px;
     font-weight: 300;
 }
 
-.home .home-left form {
+.home .text-container form {
     width: 70%;
     gap: 15px;
 }
 
-.home .home-left form input,
+.home .text-container form input,
 form button {
     padding: 15px;
     border-radius: 20px;
     font-size: 12pt;
 }
 
-.home .home-left form input {
+.home .text-container form input {
     padding: 12px;
     border: double 7px var(--color-standard-purple);
 }
 
-.home .home-left form input:is(:focus, :valid) {
+.home .text-container form input:is(:focus, :valid) {
     background-color: var(--focus);
 }
 
@@ -133,7 +131,7 @@ input[type="email"]:invalid:not(:placeholder-shown):not(:focus) {
     border-color: var(--red);
 }
 
-.home .home-left form button {
+.home .text-container form button {
     width: 50%;
     background-color: var(--color-standard-purple);
     color: var(--white);
@@ -142,16 +140,16 @@ input[type="email"]:invalid:not(:placeholder-shown):not(:focus) {
     transition: 0.4s all;
 }
 
-.home .home-left form button:active {
+.home .text-container form button:active {
     position: relative;
     left: 2px;
 }
 
-.home .img-home {
+.home .visual-container {
     width: 500px;
     height: 500px;
 }
 
-.home .img-home img {
+.home .visual-container img {
     width: 100%;
 }
