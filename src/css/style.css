@@ -5,6 +5,16 @@
     justify-content: space-between;
 }
 
+.keyboard-navigation :is(
+    .header ul li a:focus,
+    .header .logo:focus,
+    .home .home-left form button:focus,
+    .home .home-left form input:focus
+) {
+    outline: 2px solid var(--color-standard-purple);
+    outline-offset: 4px;
+}
+
 .header {
     padding-top: 25px;
 }
@@ -15,8 +25,9 @@
     font-weight: 400;
     transition: 0.2s ease-in-out;
 }
+
 .header .logo:hover h2 {
-    text-shadow: 0 0 8px #ffffffc3;
+    text-shadow: 0 0 8px var(--white);
     cursor: pointer;
 }
 
@@ -27,7 +38,7 @@
 }
 
 .header ul li a {
-    color: #ffffff;
+    color: var(--white);
     transition: 0.2s ease-in-out;
 }
 
@@ -35,7 +46,7 @@
     color: var(--color-standard-purple);
 }
 
-.header ul li:last-child a:last-child {
+.header ul li:last-child a {
     padding: 10px;
     border-radius: 15px;
     border-style: solid;
@@ -43,9 +54,9 @@
     border-color: var(--color-standard-purple);
 }
 
-.header ul li:last-child a:last-child:hover {
+.header ul li:last-child a:hover {
     background-color: var(--color-standard-purple);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .home {
@@ -53,8 +64,7 @@
     margin-top: 5px;
 }
 
-.home .home-left,
-.home .home-left form {
+.home :is(.home-left, .home-left form) {
     display: flex;
     flex-direction: column;
 }
@@ -85,7 +95,8 @@
     gap: 15px;
 }
 
-.home .home-left form input, form button {
+.home .home-left form input,
+form button {
     padding: 15px;
     border-radius: 20px;
     font-size: 12pt;
@@ -96,19 +107,41 @@
     border: double 7px var(--color-standard-purple);
 }
 
-.home .home-left form input:focus,
-.home .home-left form input:valid {
-    background-color: #E8F0FE;
+.home .home-left form input:is(:focus, :valid) {
+    background-color: var(--focus);
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+input:invalid:not(:placeholder-shown):not(input[type="email"]):not(:autofill),
+input[type="email"]:invalid:not(:placeholder-shown):not(:focus) {
+    animation: shake 300ms;
+    background-color: var(--white);
+    color: var(--red);
+    border-color: var(--red);
 }
 
 .home .home-left form button {
     width: 50%;
     background-color: var(--color-standard-purple);
-    color: #ffffff;
+    color: var(--white);
     font-weight: 700;
     cursor: pointer;
     transition: 0.4s all;
 }
+
 .home .home-left form button:active {
     position: relative;
     left: 2px;

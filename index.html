@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/responsive.css">
 </head>
-<body>
+<body >
     <header class="header">
-        <div class="logo">
+        <div class="logo" role="button" tabindex="0">
             <h2>Marketing<br>Creativø</h2>
         </div>
 
@@ -38,8 +38,9 @@
             </div>
 
             <form method="get" action="./index.html">
-                <input type="text" name="nome" placeholder="Nome"required>
-                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="nome" placeholder="Nome" pattern="[a-zA-Z\s]*" required title="Preencha com o seu nome">
+                <input type="email" name="email" placeholder="E-mail" required title="Digite o seu melhor email">
+                
                 <button type="submit">Enviar ></button>
             </form>
         </div>
@@ -48,5 +49,7 @@
             <img src="./src/images/77d0a7c454e658833800528e748edb9.svg" alt="Mulher roxa meditando">
         </div>
     </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>

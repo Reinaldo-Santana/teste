@@ -4,7 +4,6 @@ body {
     max-width: 1200px;
     margin-inline: auto;
     background-color: rgb(34, 34, 34);
-    background-color: black;
     color: white;
     font-family: 'Poppins';
 }
@@ -15,5 +14,8 @@ body {
 }
 
 :root {
+    --red: #ff0000;
+    --white: #ffffff;
     --color-standard-purple: rgba(132, 13, 201);
+    --focus: #E8F0FE;
 }

@@ -1,5 +1,7 @@
-@media (width <= 1275px) {
-    .header, .home {
+@media (width <=1275px) {
+
+    .header,
+    .home {
         padding-inline: 5%;
     }
 
@@ -8,7 +10,7 @@
     }
 
     .header .logo:active h2 {
-        text-shadow: 0 0 8px #ffffffc3;
+        text-shadow: 0 0 8px var(--white)c3;
         transition: none;
     }
 
@@ -25,7 +27,7 @@
 
     .header ul li:last-child a:last-child:active {
         background-color: var(--color-standard-purple);
-        color: #ffffff;
+        color: var(--white);
     }
 
     .home {
@@ -38,7 +40,7 @@
 
 
     .home .home-left form button:hover {
-        color: #ffffff;
+        color: var(--white);
     }
 
     .home .home-left form button::before {
@@ -46,7 +48,7 @@
     }
 }
 
-@media (width >= 993px) and (width <= 1035px) {
+@media (width >=993px) and (width <=1035px) {
     .header ul {
         margin-right: 0;
     }
@@ -72,12 +74,14 @@
     }
 }
 
-@media (width <= 992px) {
-    .header, .home {
+@media (width <=992px) {
+
+    .header,
+    .home {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .header {
         padding-top: 50px;
         gap: 25px;
@@ -113,7 +117,7 @@
     }
 }
 
-@media (width <= 576px) {
+@media (width <=576px) {
     .header {
         padding-inline: 1.5%;
         gap: 40px;
@@ -149,7 +153,7 @@
     }
 }
 
-@media (width <= 200px) {
+@media (width <=200px) {
     .header {
         padding-top: 25px;
         gap: 20px;
@@ -165,7 +169,7 @@
     }
 
     .header ul li a:hover {
-        color: #ffffff;
+        color: var(--white);
     }
 
     .header ul li:last-child a:last-child {
@@ -194,7 +198,8 @@
         gap: 10px;
     }
 
-    .home .home-left form input, form button {
+    .home .home-left form input,
+    form button {
         padding: 5px;
         border-radius: 5px;
         font-size: 8pt;
@@ -202,14 +207,14 @@
 
     .home .home-left form input {
         padding: 2px;
-        background-color: #E8F0FE;
-        border: solid 1px #ffffff;
+        background-color: var(--focus);
+        border: solid 1px var(--white);
     }
 
     .home .home-left form button {
         width: 50%;
         background-color: transparent;
-        color: #ffffff;
+        color: var(--white);
         border: solid 1px var(--color-standard-purple);
     }
 }
