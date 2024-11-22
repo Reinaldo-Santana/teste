@@ -15,7 +15,7 @@
     }
 
     .header ul li a:hover,
-    .header ul li:last-child a:last-child:hover {
+    .header ul li:last-child a:hover {
         background-color: inherit;
         color: inherit;
         transition: none;
@@ -25,7 +25,7 @@
         color: var(--color-standard-purple);
     }
 
-    .header ul li:last-child a:last-child:active {
+    .header ul li:last-child a:active {
         background-color: var(--color-standard-purple);
         color: var(--white);
     }
@@ -36,15 +36,6 @@
 
     .home .text-container {
         transform: translateY(-3%);
-    }
-
-
-    .home .text-container form button:hover {
-        color: var(--white);
-    }
-
-    .home .text-container form button::before {
-        opacity: 0;
     }
 }
 
@@ -172,13 +163,13 @@
         color: var(--white);
     }
 
-    .header ul li:last-child a:last-child {
+    .header ul li:last-child a {
         padding: 0;
         border: none;
         text-decoration: underline;
     }
 
-    .header ul li:last-child a:last-child:hover {
+    .header ul li:last-child a:hover {
         background-color: transparent;
     }
 
@@ -198,8 +189,7 @@
         gap: 10px;
     }
 
-    .home .text-container form input,
-    form button {
+    .home .text-container form :is(input, button) {
         padding: 5px;
         border-radius: 5px;
         font-size: 8pt;

@@ -5,10 +5,12 @@
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(.header ul li a:focus,
-    .header .logo:focus,
-    .home .text-container form button:focus,
-    .home .text-container form input:focus) {
+.keyboard-navigation :is(
+    .header ul li a,
+    .header .logo,
+    .home .text-container form button,
+    .home .text-container form input
+):focus {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
 }
@@ -93,8 +95,7 @@
     gap: 15px;
 }
 
-.home .text-container form input,
-form button {
+.home .text-container form :is(input, button) {
     padding: 15px;
     border-radius: 20px;
     font-size: 12pt;
