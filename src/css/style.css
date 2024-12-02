@@ -143,12 +143,12 @@ input[type="email"]:invalid:not(:placeholder-shown):not(:focus) {
 }
 
 .home .text-container form button {
-    width: 50%;
+    width: 40%;
+    padding: 12px;
     background-color: var(--color-standard-purple);
     color: var(--white);
     font-weight: 700;
     cursor: pointer;
-    transition: 0.4s all;
 }
 
 .home .text-container form button:active {

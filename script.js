@@ -30,6 +30,7 @@ document.addEventListener('mousedown', () => {
 });
 
 
+
 document.querySelectorAll('input').forEach(input => {
     input.addEventListener('input', () => {
         if (input.checkValidity() === false) {
@@ -44,38 +45,65 @@ document.querySelectorAll('input').forEach(input => {
 });
 
 
-// Seleciona todos os inputs do formulário que possuem o atributo 'required'
-const inputs = document.querySelectorAll('input[required]');
 
-// Adiciona o evento 'input' para cada input
-inputs.forEach(function (input) {
-    input.addEventListener('input', function () {
-        // Atualiza o título se o campo for válido
-        if (this.validity.valid) {
-            this.setCustomValidity(''); // Limpa qualquer erro personalizado
-            this.setAttribute('title', 'Preencha este campo'); // Mensagem padrão
-        }
+// Função para capitalizar palavras
+function capitalizeWords(input) {
+    input.value = input.value.replace(/\b(\p{L})(\p{L}*)/gu, (match, firstLetter, restOfWord) => {
+        return firstLetter.toUpperCase() + restOfWord.toLowerCase();
     });
+}
 
-    // Adiciona o evento 'invalid' para cada input
-    input.addEventListener('invalid', function () {
-        // Verifica se o campo está vazio
-        if (this.validity.valueMissing) {
-            this.setCustomValidity(''); // Limpa qualquer erro personalizado
-            this.setAttribute('title', 'Preencha este campo');
-        }
-        // Se o campo for de tipo 'email'
-        else if (this.type === 'email') {
-            // Validação específica para email
-            if (this.validity.typeMismatch) {
-                this.setCustomValidity(''); // Limpa qualquer erro anterior
-                this.setAttribute('title', 'Preencha com um e-mail válido');
+// Função para forçar a revalidação
+function forceValidation(input) {
+    const regex = /^[A-Za-zÀ-ÿ\s'-]*$/; // Mesmo pattern do HTML
+    if (!regex.test(input.value)) {
+        input.setCustomValidity("Insira apenas letras, espaços, apóstrofos ou hifens.");
+    } else {
+        input.setCustomValidity(""); // Campo válido
+    }
+}
+
+// Seleciona os campos
+const nomeInput = document.getElementById('nome');
+
+// Aplica a capitalização e força a validação durante a digitação
+[nomeInput].forEach(input => {
+    input.addEventListener('input', () => {
+        capitalizeWords(input);
+        forceValidation(input);
+    });
+});
+
+
+
+
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (!input.validity.valid) {
+            if (input.type === 'text') {
+                input.title = 'Digite um nome válido!';
+            } else if (input.type === 'email') {
+                input.title = 'Digite um e-mail válido!';
+            }
+        } else {
+            if (input.type === 'text') {
+                input.title = 'Digite o seu nome completo';
+            } else if (input.type === 'email') {
+                input.title = 'Digite o seu e-mail';
             }
         }
-        // Se o valor não corresponder ao padrão (para campos de texto, como nome)
-        else if (this.validity.patternMismatch) {
-            this.setCustomValidity(''); // Limpa qualquer erro anterior
-            this.setAttribute('title', 'Números e símbolos não são permitidos');
-        }
     });
+})
+
+
+
+const form = document.getElementById('formulario');
+form.addEventListener('submit', function (event) {
+    const nomeInput = document.getElementById('nome');
+    if (nomeInput.value.length < 5) {
+        event.preventDefault(); // Impede o envio do formulário
+        alert('O nome completo deve ter pelo menos 5 caracteres.');
+    }
 });

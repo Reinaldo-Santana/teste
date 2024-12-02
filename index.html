@@ -38,16 +38,17 @@
                     industry's standard dummy text ever since the 1500s.</p>
             </div>
 
-            <form method="get" action="./index.html">
-                <input type="text" name="nome" placeholder="Nome" pattern="[a-zA-Z\s]*" required title="Preencha com o seu nome">
-                <input type="email" name="email" placeholder="E-mail" required title="Digite o seu melhor email">
+            <form id="formulario" method="get" action="./index.html">
+                <input id="nome" type="text" name="nome" placeholder="Nome completo" title="Digite o seu nome completo" pattern="[a-zA-ZÀ-ÿ\s'-]*" maxlength="50" minlength="5" required aria-required="true">
 
-                <button type="submit">Enviar ></button>
+                <input type="email" name="email" placeholder="E-mail" required title="Digite seu melhor e-mail">
+
+                <button type="submit" aria-label="Enviar formulário">Enviar ></button>
             </form>
         </div>
 
         <div class="visual-container">
-            <img src="./src/images/77d0a7c454e658833800528e748edb9.svg" alt="Mulher roxa meditando">
+            <img src="./src/images/Studying Illustrations.svg" alt="Mulher roxa estudando">
         </div>
     </main>
 
