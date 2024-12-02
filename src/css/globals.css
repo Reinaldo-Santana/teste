@@ -3,8 +3,8 @@
 body {
     max-width: 1200px;
     margin-inline: auto;
-    background-color: rgb(34, 34, 34);
-    color: white;
+    background-color: #222222;
+    color: #ffffff;
     font-family: 'Poppins';
 }
 @media (width >= 1600px) {
@@ -12,10 +12,15 @@ body {
         max-width: 1400px;
     }
 }
+@media (width >= 1920px) {
+    body {
+        max-width: 1720px;
+    }
+}
 
 :root {
     --red: #ff0000;
     --white: #ffffff;
-    --color-standard-purple: rgba(132, 13, 201);
+    --color-standard-purple: #a200ff;
     --focus: #E8F0FE;
 }

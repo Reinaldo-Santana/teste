@@ -59,6 +59,16 @@
     color: var(--white);
 }
 
+.header ul li a.active-state {
+    color: var(--color-standard-purple);
+}
+
+.header ul li:last-child a.active-state {
+    background-color: var(--color-standard-purple);
+    color: var(--white);
+    transition: none;
+}
+
 .home {
     min-height: 87vh;
     margin-top: 5px;

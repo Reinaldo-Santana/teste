@@ -1,5 +1,4 @@
 @media (width <= 1275px) {
-
     .header,
     .home {
         padding-inline: 5%;
@@ -10,7 +9,7 @@
     }
 
     .header .logo:active h2 {
-        text-shadow: 0 0 8px var(--white)c3;
+        text-shadow: 0 0 8px var(--white);
         transition: none;
     }
 
