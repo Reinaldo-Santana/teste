@@ -4,7 +4,7 @@ body {
     max-width: 1200px;
     margin-inline: auto;
     background-color: #222222;
-    color: #ffffff;
+        color: #ffffff;
     font-family: 'Poppins';
 }
 @media (width >= 1600px) {
