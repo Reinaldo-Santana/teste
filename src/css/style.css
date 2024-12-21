@@ -5,12 +5,12 @@
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(
+:is(
     .header ul li a,
     .header .logo,
     .home .text-container form button,
     .home .text-container form input
-):focus {
+):focus-visible {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
 }

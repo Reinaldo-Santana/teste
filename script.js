@@ -1,32 +1,15 @@
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-    }
-
     if (event.key === 'Enter') {
-        // Simula o estado :active para o elemento focado
         const activeElement = document.activeElement;
-        if (
-            activeElement &&
-            document.body.classList.contains('keyboard-navigation')
-        ) {
+        if (activeElement) {
             activeElement.classList.add('active-state');
 
-            // Remover o estado ativo após um curto intervalo (simula comportamento do :active)
+            // Remove o estado ativo após um curto intervalo
             setTimeout(() => {
                 activeElement.classList.remove('active-state');
             }, 150);
         }
     }
-});
-
-document.addEventListener('mousedown', () => {
-    document.body.classList.remove('keyboard-navigation');
-
-    // Remove o estado ativo de qualquer elemento
-    document.querySelectorAll('.active-state').forEach((el) => {
-        el.classList.remove('active-state');
-    });
 });
 
 
