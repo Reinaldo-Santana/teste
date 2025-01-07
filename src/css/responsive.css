@@ -1,14 +1,15 @@
-@media (width <= 1275px) {
+@media (width <=1275px) {
+
     .header,
     .home {
         padding-inline: 5%;
     }
 
-    .header .logo:hover h2 {
+    .header .brand-logo:hover h2 {
         text-shadow: none;
     }
 
-    .header .logo:active h2 {
+    .header .brand-logo:active h2 {
         text-shadow: 0 0 8px var(--white);
         transition: none;
     }
@@ -38,7 +39,7 @@
     }
 }
 
-@media (width >= 993px) and (width <= 1035px) {
+@media (width >=993px) and (width <=1035px) {
     .header ul {
         margin-right: 0;
     }
@@ -64,7 +65,7 @@
     }
 }
 
-@media (width <= 992px) {
+@media (width <=992px) {
 
     .header,
     .home {
@@ -107,7 +108,7 @@
     }
 }
 
-@media (width <= 576px) {
+@media (width <=576px) {
     .header {
         padding-inline: 1.5%;
         gap: 40px;
@@ -143,13 +144,13 @@
     }
 }
 
-@media (width <= 200px) {
+@media (width <=200px) {
     .header {
         padding-top: 25px;
         gap: 20px;
     }
 
-    .header .logo h2 {
+    .header .brand-logo h2 {
         font-size: 21px;
     }
 

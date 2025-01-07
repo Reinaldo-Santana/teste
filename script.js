@@ -53,16 +53,6 @@ function capitalizeWords(input) {
     });
 }
 
-// Função para forçar a revalidação
-function forceValidation(input) {
-    const regex = /^[A-Za-zÀ-ÿ\s'-]*$/; // Mesmo pattern do HTML
-    if (!regex.test(input.value)) {
-        input.setCustomValidity("Insira apenas letras, espaços, apóstrofos ou hifens.");
-    } else {
-        input.setCustomValidity(""); // Campo válido
-    }
-}
-
 // Seleciona os campos
 const nomeInput = document.getElementById('nome');
 
@@ -74,6 +64,16 @@ const nomeInput = document.getElementById('nome');
     });
 });
 
+// Função para forçar a revalidação
+function forceValidation(input) {
+    const regex = /^[A-Za-zÀ-ÿ\s'-]*$/; // Mesmo pattern do HTML
+    if (!regex.test(input.value)) {
+        input.setCustomValidity("Insira apenas letras, espaços, apóstrofos ou hifens.");
+    } else {
+        input.setCustomValidity(""); // Campo válido
+    }
+    input.reportValidity(); // Exibe a mensagem de erro personalizada (se houver)
+}
 
 
 

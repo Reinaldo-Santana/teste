@@ -5,12 +5,10 @@
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(
-    .header ul li a,
-    .header .logo,
+.keyboard-navigation :is(.header ul li a,
+    .header .brand-logo,
     .home .text-container form button,
-    .home .text-container form input
-):focus {
+    .home .text-container form input):focus {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
 }
@@ -19,14 +17,14 @@
     padding-top: 25px;
 }
 
-.header .logo h2 {
+.header .brand-logo h2 {
     font-size: 32px;
     line-height: 24px;
     font-weight: 400;
     transition: 0.2s ease-in-out;
 }
 
-.header .logo:hover h2 {
+.header .brand-logo:hover h2 {
     text-shadow: 0 0 8px var(--white);
     cursor: pointer;
 }
