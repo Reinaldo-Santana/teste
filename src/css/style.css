@@ -70,7 +70,6 @@
 .home {
     min-height: 86vh;
     margin-top: 5px;
-    background-color: red;
 }
 
 .home :is(.text-container, .text-container form) {
