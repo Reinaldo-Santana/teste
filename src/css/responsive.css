@@ -39,32 +39,6 @@
     }
 }
 
-@media (width >=993px) and (width <=1035px) {
-    .header ul {
-        margin-right: 0;
-    }
-
-    .home {
-        padding-inline: 0;
-        justify-content: center;
-    }
-
-    .home .text-container {
-        flex-direction: row;
-        gap: 8rem;
-    }
-
-    .home .text-container h1 {
-        width: 382px;
-        font-size: 2.5rem;
-        line-height: 42px;
-    }
-
-    .home .visual-container {
-        display: none;
-    }
-}
-
 @media (width <=992px) {
 
     .header,
