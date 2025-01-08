@@ -116,11 +116,6 @@
         width: 90%;
     }
 
-    .home .text-container form .erro {
-        font-size: 0.7em;
-        margin-bottom: 0;
-    }
-
     .home .text-container form button {
         align-self: center;
     }
@@ -169,6 +164,11 @@
     .home .text-container form {
         width: 100%;
         gap: 10px;
+    }
+
+    .home .text-container form .erro {
+        font-size: 0.7em;
+        margin-bottom: 0;
     }
 
     .home .text-container form :is(input, button) {
