@@ -5,11 +5,11 @@
         padding-inline: 5%;
     }
 
-    .header .brand-logo:hover h2 {
+    .header .logo:hover h2 {
         text-shadow: none;
     }
 
-    .header .brand-logo:active h2 {
+    .header .logo:active h2 {
         text-shadow: 0 0 8px var(--white);
         transition: none;
     }
@@ -34,13 +34,16 @@
         margin-top: 10px;
     }
 
+    .home .text-container form .erro {
+        width: auto;
+    }
+
     .home .text-container {
         transform: translateY(-3%);
     }
 }
 
 @media (width <=992px) {
-
     .header,
     .home {
         flex-direction: column;
@@ -113,6 +116,11 @@
         width: 90%;
     }
 
+    .home .text-container form .erro {
+        font-size: 0.7em;
+        margin-bottom: 0;
+    }
+
     .home .text-container form button {
         align-self: center;
     }
@@ -124,7 +132,7 @@
         gap: 20px;
     }
 
-    .header .brand-logo h2 {
+    .header .logo h2 {
         font-size: 21px;
     }
 

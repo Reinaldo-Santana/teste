@@ -99,11 +99,21 @@ inputs.forEach(input => {
 
 
 
-const form = document.getElementById('formulario');
-form.addEventListener('submit', function (event) {
+document.getElementById('formulario').addEventListener('submit', function (event) {
     const nomeInput = document.getElementById('nome');
+    const erroDiv = document.getElementById('erro-nome');
     if (nomeInput.value.length < 5) {
         event.preventDefault(); // Impede o envio do formulário
-        alert('O nome completo deve ter pelo menos 5 caracteres.');
+        erroDiv.textContent = 'O nome completo deve ter pelo menos 5 caracteres.';
+    } else {
+        erroDiv.textContent = ''; // Limpa a mensagem de erro
+    }
+});
+
+document.getElementById('nome').addEventListener('input', function () {
+    const nomeInput = document.getElementById('nome');
+    const erroDiv = document.getElementById('erro-nome');
+    if (nomeInput.value.length >= 5) {
+        erroDiv.textContent = ''; // Remove a mensagem de erro quando válido
     }
 });

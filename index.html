@@ -21,7 +21,7 @@
 
 <body>
     <header class="header">
-        <div class="brand-logo" role="button" tabindex="0">
+        <div class="logo" role="button" tabindex="0">
             <h2>Marketing<br>Creativø</h2>
         </div>
 
@@ -44,8 +44,10 @@
             </div>
 
             <form id="formulario" method="get" action="./index.html">
+
+                <div id="erro-nome" class="erro" aria-live="polite"></div>
                 <input id="nome" type="text" name="nome" placeholder="Nome completo" title="Digite o seu nome completo"
-                    pattern="[a-zA-ZÀ-ÿ\s'-]*" maxlength="50" minlength="5" required aria-required="true">
+                    pattern="[a-zA-ZÀ-ÿ\s'-]*" maxlength="50" minlength="5" required aria-required="true" aria-describedby="erro-nome">
 
                 <input type="email" name="email" placeholder="E-mail" required title="Digite seu melhor e-mail">
 

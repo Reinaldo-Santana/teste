@@ -6,7 +6,7 @@
 }
 
 .keyboard-navigation :is(.header ul li a,
-    .header .brand-logo,
+    .header .logo,
     .home .text-container form button,
     .home .text-container form input):focus {
     outline: 2px solid var(--color-standard-purple);
@@ -15,112 +15,62 @@
 
 .header {
     padding-top: 25px;
-}
 
-.header .brand-logo h2 {
-    font-size: 32px;
-    line-height: 24px;
-    font-weight: 400;
-    transition: 0.2s ease-in-out;
-}
+    .logo {
+        h2 {
+            font-size: 32px;
+            line-height: 24px;
+            font-weight: 400;
+            transition: 0.2s ease-in-out;
+        }
 
-.header .brand-logo:hover h2 {
-    text-shadow: 0 0 8px var(--white);
-    cursor: pointer;
-}
+        &:hover h2 {
+            text-shadow: 0 0 8px var(--white);
+            cursor: pointer;
+        }
+    }
 
-.header ul {
-    margin-right: 15px;
-    display: flex;
-    gap: 40px;
-}
+    ul {
+        margin-right: 15px;
+        display: flex;
+        gap: 40px;
 
-.header ul li a {
-    color: var(--white);
-    transition: 0.2s ease-in-out;
-}
+        li a {
+            color: var(--white);
+            transition: 0.2s ease-in-out;
 
-.header ul li a:hover {
-    color: var(--color-standard-purple);
-}
+            &:hover {
+                color: var(--color-standard-purple);
+            }
 
-.header ul li:last-child a {
-    padding: 10px;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 2px 0px;
-    border-color: var(--color-standard-purple);
-}
+            &.active-state {
+                color: var(--color-standard-purple);
+            }
+        }
+    }
 
-.header ul li:last-child a:hover {
-    background-color: var(--color-standard-purple);
-    color: var(--white);
-}
+    li:last-child a {
+        padding: 10px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 2px 0px;
+        border-color: var(--color-standard-purple);
 
-.header ul li a.active-state {
-    color: var(--color-standard-purple);
-}
+        &:hover,
+        &.active-state {
+            background-color: var(--color-standard-purple);
+            color: var(--white);
+        }
 
-.header ul li:last-child a.active-state {
-    background-color: var(--color-standard-purple);
-    color: var(--white);
-    transition: none;
-}
-
-.home {
-    min-height: 86vh;
-    margin-top: 5px;
-}
-
-.home :is(.text-container, .text-container form) {
-    display: flex;
-    flex-direction: column;
-}
-
-.home .text-container {
-    gap: 20px;
-    transform: translateY(-7%);
-}
-
-.home .text-container h1 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-}
-
-.home .text-container h1::first-line {
-    color: var(--color-standard-purple);
-}
-
-.home .text-container p {
-    max-width: 500px;
-    margin-top: 20px;
-    line-height: 20px;
-    font-weight: 300;
-}
-
-.home .text-container form {
-    width: 70%;
-    gap: 15px;
-}
-
-.home .text-container form :is(input, button) {
-    padding: 15px;
-    border-radius: 20px;
-    font-size: 12pt;
-}
-
-.home .text-container form input {
-    padding: 12px;
-    border: double 7px var(--color-standard-purple);
-}
-
-.home .text-container form input:is(:focus, :valid) {
-    background-color: var(--focus);
+        &.active-state {
+            transition: none;
+        }
+    }
 }
 
 @keyframes shake {
     25% {
-        transform: translateX(5px);
+        transform: translateX(4px);
     }
 
     50% {
@@ -130,35 +80,97 @@
     75% {
         transform: translateX(4px);
     }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-input:invalid:not(:placeholder-shown):not(input[type="email"]):not(:autofill),
-input[type="email"]:invalid:not(:placeholder-shown):not(:focus) {
-    animation: shake 300ms;
-    background-color: var(--white);
-    color: var(--red);
-    border-color: var(--red);
-}
+.home {
+    min-height: 86vh;
+    margin-top: 5px;
 
-.home .text-container form button {
-    width: 40%;
-    padding: 12px;
-    background-color: var(--color-standard-purple);
-    color: var(--white);
-    font-weight: 700;
-    cursor: pointer;
-}
+    :is(.text-container, .text-container form) {
+        display: flex;
+        flex-direction: column;
+    }
 
-.home .text-container form button:active {
-    position: relative;
-    left: 2px;
-}
+    .text-container {
+        gap: 20px;
+        transform: translateY(-7%);
 
-.home .visual-container {
-    width: 500px;
-    height: 500px;
-}
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+            margin-bottom: 20px;
 
-.home .visual-container img {
-    width: 100%;
+            &::first-line {
+                color: var(--color-standard-purple);
+            }
+        }
+
+        p {
+            max-width: 500px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+
+        form {
+            width: 70%;
+            gap: 15px;
+
+            :is(input, button) {
+                padding: 15px;
+                border-radius: 20px;
+                font-size: 12pt;
+            }
+
+            .erro {
+                width: 102%;
+                margin-bottom: -10px;
+                color: var(--red);
+                font-size: 0.9em;
+            }
+
+            input {
+                padding: 12px;
+                border: double 7px var(--color-standard-purple);
+
+                &:is(:focus, :valid) {
+                    background-color: var(--focus);
+                }
+
+                &:is(:invalid:not(:placeholder-shown):not(input[type="email"]):not(:autofill),
+                    input:invalid[type="email"]:not(:placeholder-shown):not(:focus)) {
+                    animation: shake 300ms;
+                    background-color: var(--white);
+                    color: var(--red);
+                    border-color: var(--red);
+                }
+            }
+
+            button {
+                width: 40%;
+                padding: 12px;
+                background-color: var(--color-standard-purple);
+                color: var(--white);
+                font-weight: 700;
+                cursor: pointer;
+
+                &:active {
+                    position: relative;
+                    left: 2px;
+                }
+            }
+        }
+    }
+
+    .visual-container {
+        width: 500px;
+        height: 500px;
+
+        img {
+            width: 100%;
+        }
+    }
 }
