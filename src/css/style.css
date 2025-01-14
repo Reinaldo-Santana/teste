@@ -9,12 +9,30 @@ html {
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(.header ul li a,
+:is(.header ul li a,
     .header .logo,
     .home .text-container form button,
-    .home .text-container form input):focus {
+    .home .text-container form input):focus-visible {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(4px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .header {
@@ -60,8 +78,7 @@ html {
         border-width: 2px 0px;
         border-color: var(--color-standard-purple);
 
-        &:hover,
-        &.active-state {
+        &:is(:hover, .active-state) {
             background-color: var(--color-standard-purple);
             color: var(--white);
         }
@@ -69,24 +86,6 @@ html {
         &.active-state {
             transition: none;
         }
-    }
-}
-
-@keyframes shake {
-    25% {
-        transform: translateX(4px);
-    }
-
-    50% {
-        transform: translateX(-4px);
-    }
-
-    75% {
-        transform: translateX(4px);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
 
