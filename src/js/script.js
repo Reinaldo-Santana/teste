@@ -1,30 +1,32 @@
-let isKeyboardNavigation = false;
-
-window.addEventListener('keydown', () => {
-    isKeyboardNavigation = true;
-    document.body.classList.add('keyboard-navigation');
-});
-
-window.addEventListener('mousedown', () => {
-    isKeyboardNavigation = false;
-    document.body.classList.remove('keyboard-navigation');
-});
-
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        const activeElement = document.activeElement;
+    if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+    }
 
-        if (activeElement) {
-            // Simula o estado :active para o elemento focado
+    if (event.key === 'Enter') {
+        // Simula o estado :active para o elemento focado
+        const activeElement = document.activeElement;
+        if (
+            activeElement &&
+            document.body.classList.contains('keyboard-navigation')
+        ) {
             activeElement.classList.add('active-state');
-            setTimeout(() => activeElement.classList.remove('active-state'), 150);
+
+            // Remover o estado ativo após um curto intervalo (simula comportamento do :active)
+            setTimeout(() => {
+                activeElement.classList.remove('active-state');
+            }, 150);
         }
     }
 });
 
 document.addEventListener('mousedown', () => {
-    // Remove o foco visível ao clicar com o mouse
-    document.querySelectorAll(':focus-visible').forEach((el) => el.blur());
+    document.body.classList.remove('keyboard-navigation');
+
+    // Remove o estado ativo de qualquer elemento
+    document.querySelectorAll('.active-state').forEach((el) => {
+        el.classList.remove('active-state');
+    });
 });
 
 
