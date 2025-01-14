@@ -1,3 +1,15 @@
+let isKeyboardNavigation = false;
+
+window.addEventListener('keydown', () => {
+    isKeyboardNavigation = true;
+    document.body.classList.add('keyboard-navigation');
+});
+
+window.addEventListener('mousedown', () => {
+    isKeyboardNavigation = false;
+    document.body.classList.remove('keyboard-navigation');
+});
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         const activeElement = document.activeElement;

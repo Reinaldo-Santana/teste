@@ -9,7 +9,7 @@ html {
     justify-content: space-between;
 }
 
-:is(.header ul li a,
+.keyboard-navigation :is(.header ul li a,
     .header .logo,
     .home .text-container form button,
     .home .text-container form input):focus-visible {
