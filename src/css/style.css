@@ -155,6 +155,7 @@ html {
 
             button {
                 width: 40%;
+                min-width: 8.7rem;
                 padding: 1.2rem;
                 background-color: var(--color-standard-purple);
                 color: var(--white);
