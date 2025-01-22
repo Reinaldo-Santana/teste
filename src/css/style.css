@@ -9,10 +9,11 @@ html {
     justify-content: space-between;
 }
 
-.keyboard-navigation :is(.header ul li a,
+.keyboard-navigation :is(
+    .header ul li a,
     .header .logo,
-    .home .text-container form button,
-    .home .text-container form input):focus {
+    .home .text-container form :is(input, button)
+):focus {
     outline: 2px solid var(--color-standard-purple);
     outline-offset: 4px;
 }
