@@ -55,6 +55,7 @@
         margin-right: 0;
         justify-content: center;
         flex-wrap: wrap;
+        line-height: 1rem;
     }
 
     .home {
@@ -68,6 +69,7 @@
 
     .home .text-container h1 {
         padding-inline: 10%;
+        line-height: 5rem;
     }
 
     .home .text-container form {
@@ -88,10 +90,6 @@
 
     .header h2 {
         font-size: 2.8rem;
-    }
-
-    .header ul {
-        line-height: 1rem;
     }
 
     .header ul li a {
