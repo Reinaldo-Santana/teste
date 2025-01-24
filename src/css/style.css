@@ -37,7 +37,9 @@ html {
 }
 
 .header {
-    padding-top: 2.5rem;
+    padding-top: 25px;
+    flex-wrap: wrap;
+
 
     .logo {
         h2 {
@@ -54,7 +56,7 @@ html {
     }
 
     ul {
-        margin-right: 1.5rem;
+        margin-right: 15px;
         display: flex;
         gap: 4rem;
 
@@ -74,7 +76,7 @@ html {
 
     li:last-child a {
         padding: 1rem;
-        border-radius: 1.5rem;
+        border-radius: 15px;
         border-style: solid;
         border-width: 2px 0px;
         border-color: var(--color-standard-purple);
@@ -92,7 +94,7 @@ html {
 
 .home {
     min-height: 86vh;
-    margin-top: 0.5rem;
+    margin-top: 5px;
 
     :is(.text-container, .text-container form) {
         display: flex;
@@ -101,7 +103,7 @@ html {
 
     .text-container {
         gap: 2rem;
-        transform: translateY(-7%);
+        margin-bottom: 56px;
 
         h1 {
             margin-bottom: 2rem;
@@ -114,7 +116,7 @@ html {
         }
 
         p {
-            max-width: 50rem;
+            max-width: 500px;
             line-height: 2rem;
             font-weight: 300;
         }
@@ -124,8 +126,7 @@ html {
             gap: 1.5rem;
 
             :is(input, button) {
-                padding: 1.5rem;
-                border-radius: 2rem;
+                border-radius: 20px;
                 font-size: 12pt;
             }
 
@@ -155,7 +156,7 @@ html {
 
             button {
                 width: 40%;
-                min-width: 8.7rem;
+                min-width: 87px;
                 padding: 1.2rem;
                 background-color: var(--color-standard-purple);
                 color: var(--white);
@@ -164,7 +165,7 @@ html {
 
                 &:active {
                     position: relative;
-                    left: 0.2rem;
+                    left: 2px;
                 }
             }
         }
