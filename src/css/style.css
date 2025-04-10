@@ -37,7 +37,7 @@ html {
 }
 
 .header {
-    padding-top: 25px;
+    padding-top: 2.5rem;
     flex-wrap: wrap;
 
 
@@ -76,9 +76,9 @@ html {
 
     li:last-child a {
         padding: 1rem;
-        border-radius: 15px;
+        border-radius: 1.5rem;
         border-style: solid;
-        border-width: 2px 0px;
+        border-width: 0.2rem 0;
         border-color: var(--color-standard-purple);
 
         &:is(:hover, .active-state) {
@@ -155,8 +155,7 @@ html {
             }
 
             button {
-                width: 40%;
-                min-width: 87px;
+                width: max(40%, 87px);
                 padding: 1.2rem;
                 background-color: var(--color-standard-purple);
                 color: var(--white);
