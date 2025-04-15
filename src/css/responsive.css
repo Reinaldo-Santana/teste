@@ -14,7 +14,7 @@
         transition: none;
     }
 
-    /* .header ul li a:hover,
+    .header ul li a:hover,
     .header ul li:last-child a:hover {
         background-color: inherit;
         color: inherit;
@@ -28,7 +28,7 @@
     .header ul li:last-child a:active {
         background-color: var(--color-standard-purple);
         color: var(--white);
-    } */
+    }
 
     .home {
         margin-top: 10px;
